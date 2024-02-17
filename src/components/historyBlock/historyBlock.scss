@@ -1,0 +1,79 @@
+@import "./src/scss/securiry";
+
+.history{
+  background: $colorBlue;
+  border-radius: 40px;
+
+
+&__info {
+  max-width: 710px;
+}
+
+  &__title{
+    font-size: 20px;
+    font-weight: 500;
+    background: $colorGradientBlueFuchsia;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+  }
+
+  &__heading{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__content{
+    max-width: 1440px;
+    width: 100%;
+    padding: 87px 60px 103px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  &__text{
+    margin-bottom: 16px;
+  }
+
+  &__images{
+    position: relative;
+
+    &-1{
+      max-width: 134px;
+      left: 51%;
+      top: -10%;
+    }
+    &-2{
+      max-width: 107px;
+      left: 17%;
+      top: 20%;
+    }
+    &-3{
+      max-width: 272px;
+      left: 36%;
+      top: 27%;
+    }
+    &-4{
+      max-width: 194px;
+      left: 4%;
+      top: 51%;
+    }
+    &-5{
+      max-width: 155px;
+      left: 80%;
+      top: 30%;
+    }
+    &-6{
+      max-width: 154px;
+      left: 44%;
+      top: 86%;
+    }
+
+    img{
+      position: absolute;
+    }
+  }
+}

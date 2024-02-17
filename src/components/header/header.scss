@@ -1,0 +1,28 @@
+.header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+
+  max-width: 1440px;
+  margin: auto;
+
+  &__right{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+
+  &__left{
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  &__menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+}

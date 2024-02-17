@@ -1,0 +1,43 @@
+@import "./src/scss/securiry";
+
+.language{
+  width: 93px;
+  height: 32px;
+  background: $coloBeige;
+  color: $colorBase;
+
+  display: flex;
+  align-content: baseline;
+  grid-gap: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-active{
+    height: 100%;
+  }
+
+  &__header{
+
+  }
+
+  &__menu{
+  display: grid;
+  grid-gap: 8px;
+  }
+
+  &__arrow{
+    position: relative;
+    top: 5px;
+    width: fit-content;
+    height: fit-content;
+    transition-duration: .2s;
+    &-active {
+      transform: rotate(180deg);
+    }
+  }
+}

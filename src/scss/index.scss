@@ -1,0 +1,111 @@
+@import "../scss/securiry";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy/Gilroy-Light.eot');
+  src: url('../assets/fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Gilroy/Gilroy-Light.woff2') format('woff2'),
+  url('../assets/fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+  url('../assets/fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body{
+  max-width: 1920px;
+  margin: auto;
+  font-family: Gilroy;
+}
+
+.swiper{
+  &__buttons{
+    padding-left: 60px;
+    display: flex;
+    grid-gap: 8px;
+  }
+
+  &-button-prev, &-button-next{
+    display: none;
+  }
+
+  &__navigation{
+    margin-top: 173px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    grid-gap: 16px;
+    position: absolute;
+    bottom: 32px;
+    z-index: 1;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 1440px;
+  }
+
+  &-pagination-bullet{
+    width: 4px;
+    height: 4px;
+    background: black;
+    opacity: 1;
+
+    &-active{
+      position: relative;
+      background: $colorFuchsia;
+      width: 8px;
+      height: 8px;
+
+      &:after{
+        content: '';
+        position: absolute;
+        border: 1px solid $colorFuchsia;
+        padding: 10px;
+        border-radius: 50%;
+        top: -7px;
+        left: -7px;
+
+      }
+    }
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    background: $colorWhite;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-prev, &-next {
+      width: 14px;
+      background: $colorWhite ;
+    }
+
+    &-next {
+      transform: rotate(180deg);
+    }
+
+  }
+
+}
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 6px;
+}
+

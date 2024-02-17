@@ -1,0 +1,25 @@
+@import "./src/scss/securiry";
+
+.button{
+  padding: 12px 16px;
+  background: $colorFuchsia;
+  width: fit-content;
+  color: $colorWhite;
+  border-radius: 16px;
+
+  &:hover {
+    background: $colorFuchsiaHover;
+    transition-duration: .3s;
+    cursor: pointer;
+  }
+}
+
+.buttonBorder{
+  border: 1px solid $colorFuchsia;
+  padding: 30px 77px;
+  width: fit-content;
+  border-radius: 32px;
+  color: $colorFuchsia;
+  font-weight: bold;
+  cursor: pointer;
+}

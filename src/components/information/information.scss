@@ -1,0 +1,23 @@
+@import "./src/scss/securiry";
+
+.information {
+  max-width: 1440px;
+  margin: auto;
+  text-align: center;
+  padding: 143px 0 234px;
+
+
+  &__text {
+    font-size: 32px;
+    font-weight: 500;
+    background: $colorGradientBlueFuchsia;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 896px;
+    margin: 0 auto 42px auto;
+  }
+
+  .buttonBorder{
+    margin: auto;
+  }
+}

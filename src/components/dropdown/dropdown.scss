@@ -1,0 +1,23 @@
+@import "../src/scss/securiry";
+
+.dropdown{
+  position: absolute;
+  box-shadow: 0 0 24px #1D2F5B24;
+  top: 50px;
+  border-radius: 24px;
+
+  background: $colorWhite;
+  padding: 24px 32px;
+  width: fit-content;
+
+  &__item{
+    display: flex;
+    width: fit-content;
+    grid-gap: 8px;
+  }
+
+  &__arrow{
+    width: fit-content;
+    height: fit-content;
+  }
+}

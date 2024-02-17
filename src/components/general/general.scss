@@ -1,0 +1,45 @@
+@import "../src/scss/securiry";
+
+.general{
+  background: $colorBlue;
+  border-radius: 40px;
+
+  &__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  &__buttonWrapper{
+    margin-bottom: 246px;
+  }
+
+  &__title{
+    font-size: 64px;
+    font-weight: 600;
+
+  }
+
+  &__subtitle{
+    font-size: 24px;
+  }
+
+  &__text{
+    padding-top: 157px;
+    padding-left: 60px;
+    display: grid;
+    grid-gap: 16px;
+    align-content: baseline;
+    max-width: 643px;
+  }
+
+  &__img{
+    width: 46%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    position: absolute;
+    right: 0;
+  }
+}
