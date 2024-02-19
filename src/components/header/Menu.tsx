@@ -1,17 +1,28 @@
 import Dropdown from "../dropdown/dropdown";
-import {useState} from "react";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import {isDropdownAction, setId} from "../../reducers/reducer";
+import React from "react";
 
 type typeProps = {
     array: string[],
-    title: string
+    title: string,
+    id: number
+
 }
-const Menu = ({array, title}: typeProps) => {
-    const [isDropdown, setIsDropdown] = useState(false)
+const Menu = ({array, title, id}: typeProps) => {
+    const dispatch = useAppDispatch();
+    const {isDropdown, openedMenuId} = useAppSelector(state => state.reducer)
+
+    function setIsDropdown(e: React.MouseEvent<HTMLDivElement>) {
+        e.stopPropagation()
+        dispatch(isDropdownAction(true))
+        dispatch(setId(id))
+    }
 
     return (
-        <div onClick={() => {setIsDropdown(!isDropdown)}}>
-            <p className='header__menuTitle'>{title}</p>
-            {isDropdown ? <Dropdown array={array} title={title}/> : false}
+        <div className='menu' onClick={(e) => setIsDropdown(e)}>
+            <p className='menu__title' >{title}</p>
+            {isDropdown && openedMenuId === id ? <Dropdown array={array} title={title}/> : false}
         </div>
     );
 };

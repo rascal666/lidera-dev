@@ -43,7 +43,9 @@ const General = () => {
 
                         </div>
 
-                        <img className='general__img' src={img} alt=""/>
+                        <div className='general__imgWrapper'>
+                            <img className='general__img' src={img} alt=""/>
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>

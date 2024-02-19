@@ -30,6 +30,7 @@ body{
   max-width: 1920px;
   margin: auto;
   font-family: Gilroy;
+  font-size: 16px;
 }
 
 .swiper{
@@ -44,7 +45,7 @@ body{
   }
 
   &__navigation{
-    margin-top: 173px;
+    margin-top: 0px;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: end;
@@ -56,6 +57,35 @@ body{
     left: 50%;
     transform: translate(-50%, 0);
     max-width: 1440px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    &-business{
+      position: relative;
+      margin-top: 60px;
+      left: 50%;
+      grid-template-columns: 1fr;
+      width: fit-content;
+      transform: translateX(-50%);
+
+      .swiper__button {
+        background: #FFF0F5;
+      }
+
+      .swiper__buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        grid-gap: 16px;
+        padding-left: 0;
+      }
+    }
+  }
+  .swiper__button-prev, .swiper__button-next {
+    width: 14px;
+     background: initial;
   }
 
   &-pagination-bullet{

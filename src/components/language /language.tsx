@@ -1,5 +1,5 @@
 import './language.scss'
-import arrow from'../../assets/img/arrow.png'
+import arrow from'../../assets/img/arrowDown.png'
 import {useState} from "react";
 const Language = () => {
 
